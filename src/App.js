@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./App.css";
 
 //components
-import Score from './components/quizz/score';
-import QuestionBox from './components/quizz/question-box';
+import Score from "./components/quizz/score";
+import QuestionBox from "./components/quizz/question-box";
 
 const questions = [
   {
@@ -68,12 +68,13 @@ function App() {
       {showScore ? (
         <Score score={score} questions={questions} />
       ) : (
-       <QuestionBox 
-        currentQuestion={currentQuestion}
-        questions={questions}
-        onClick={(isCorrect) => handleAnswer(isCorrect)}
+        <QuestionBox
+          currentQuestion={currentQuestion}
+          questions={questions}
+          onClick={(isCorrect) => handleAnswer(isCorrect)}
         />
       )}
+      <p>Meu app</p>
     </div>
   );
 }
